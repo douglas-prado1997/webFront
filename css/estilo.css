@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: aqua;
+}
+
+
+.header {
+    height: 20%;
+    text-align: center;
+}
+
+.main{
+    height: 75%;
+}
+
+
+.footer {
+    height: 5%;
+    text-align: center;
+}
