@@ -19,3 +19,10 @@ html, body {
     height: 5%;
     text-align: center;
 }
+
+
+.form-login {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
