@@ -6,7 +6,7 @@ html, body {
     background-repeat: no-repeat;
     background-color: #F8F8FF;
     background-position: center top;
-    box-shadow: 0px 10px 10px rgba(0,0,0,0.5);
+    box-shadow: 0px -10px 10px rgba(0,0,0,0.5);
 
 
 }
@@ -15,6 +15,7 @@ html, body {
 .header {
     height: 20%;
     text-align: center;
+    color: #F8F8FF;
 }
 
 .main{
@@ -39,4 +40,38 @@ html, body {
 
 .form-login form {
     text-align: center; 
+}
+
+nav {
+    background-color: #83529E; 
+    padding: 10px; 
+}
+
+nav p {
+    color: white;
+    font-weight: bold; 
+    margin: 0; 
+}
+
+
+nav ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0; 
+}
+
+nav ul li {
+    display: inline; 
+    margin-right: 20px; 
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; 
+    transition: color 0.3s; 
+}
+
+
+nav ul li a:hover {
+    color: #ffcc00; 
 }
