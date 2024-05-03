@@ -4,11 +4,6 @@ html, body {
     background-image:url('imagemexerc.jpeg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-color: #F8F8FF;
-    background-position: center top;
-    box-shadow: 0px -10px 10px rgba(0,0,0,0.5);
-
-
 }
 
 
@@ -78,10 +73,14 @@ nav ul li a {
 nav ul li a:hover {
     color: #ffcc00; 
 }
+
 .imagem-exerc{
     height: 50px;
     margin-left: 0px;
     align-items: start;
+}
 
-
+.criar {
+    margin-top: 5px;
+    margin-left: 65px;
 }
