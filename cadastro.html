@@ -20,6 +20,37 @@
         <h1>Saúde e Bem-Estar</h1>
     </header>
     <main class="main">
+        <section class="form-login">
+            <h2>Cadastro</h2>
+            <form action="exercicios.html">
+                <div class="input-wrapper">
+                    <label for="username">E-mail:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-wrapper">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-wrapper">
+                    <label for="password">Cinfirmação de senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-wrapper">
+                    <label for="age">Data de Nascimento:</label>
+                    <input type="date" id="age" name="age" required>
+                </div>
+                <div class="input-wrapper">
+                    <input type="radio" id="option1" name="gender" value="option1">
+                    <label for="option1">Ganho de massa</label>
+                    <input type="radio" id="option2" name="gender" value="option2">
+                    <label for="option2">Emagrecimento</label>
+                    <input type="radio" id="option3" name="gender" value="option3">
+                    <label for="option3">Fortalecimento</label>
+                </div>
+                <button type="button" onclick="window.location.href = 'login.html';">Criar nova conta</button>
+            </form>
+            
+        </section>
     </main>
     <footer class="footer">
         <p>Saúde e Bem-Estar - 2024</p>
