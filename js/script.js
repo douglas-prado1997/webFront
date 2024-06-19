@@ -1,3 +1,5 @@
+const storageKey = 'DadosWebFront';
+
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('adminForm').addEventListener('submit', function(event) {
         event.preventDefault(); 
@@ -16,7 +18,6 @@ function register() {
 }
 
 function addFormDataToLocalStorage(id, date, name, email) {
-    const storageKey = 'DadosWebFront';
     let dataList = JSON.parse(localStorage.getItem(storageKey)) || [];
 
     const newEntry = {
@@ -31,7 +32,6 @@ function addFormDataToLocalStorage(id, date, name, email) {
 }
 
 function displayAdminList() {
-    const storageKey = 'DadosWebFront';
     const dataList = JSON.parse(localStorage.getItem(storageKey)) || [];
     const adminListContainer = document.getElementById('adminListContainer');
     adminListContainer.innerHTML = ''; 
