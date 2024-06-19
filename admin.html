@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/script.js" defer></script>
     <title>Login</title>
 </head>
-
 <body>
     <nav>
         <ul>
@@ -22,27 +20,28 @@
         <h1>Saúde e Bem-Estar</h1>
     </header>
     <main class="main">
-
         <section class="form-login">
             <h2>Cadastro de Administrador</h2>
-            <form action="principal.html">
+            <form id="adminForm">
                 <div class="input-wrapper">
                     <label for="username">Usuário:</label>
                     <input type="text" id="username" name="username" required>
                 </div>
                 <div class="input-wrapper">
                     <label for="usermail">E-mail:</label>
-                    <input type="text" id="usermail" name="usermail" required>
+                    <input type="email" id="usermail" name="usermail" required>
                 </div>
-                <button type="submit" onclick="register()">Cadastrar</button>
+                <button type="button" onclick="register()">Cadastrar</button>
             </form>
-
         </section>
-
+        <section id="adminList">
+            <h2>Lista de Administradores</h2>
+            <ul id="adminListContainer">
+            </ul>
+        </section>
     </main>
     <footer class="footer">
         <p>Saúde e Bem-Estar - 2024</p>
     </footer>
 </body>
-
 </html>
