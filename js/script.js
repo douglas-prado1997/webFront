@@ -1,8 +1,8 @@
 const storageKey = 'DadosWebFront';
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('adminForm').addEventListener('submit', function(event) {
-        event.preventDefault(); 
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('adminForm').addEventListener('submit', function (event) {
+        event.preventDefault();
         register();
     });
     displayAdminList();
@@ -13,7 +13,9 @@ function register() {
     const usermail = document.getElementById('usermail').value;
     const id = Date.now().toString();
     const date = new Date().toISOString();
-    addFormDataToLocalStorage(id, date, username, usermail);
+    if (username && usermail)
+        addFormDataToLocalStorage(id, date, username, usermail);
+
     displayAdminList();
 }
 
@@ -34,11 +36,16 @@ function addFormDataToLocalStorage(id, date, name, email) {
 function displayAdminList() {
     const dataList = JSON.parse(localStorage.getItem(storageKey)) || [];
     const adminListContainer = document.getElementById('adminListContainer');
-    adminListContainer.innerHTML = ''; 
+    adminListContainer.innerHTML = '';
 
     dataList.forEach(data => {
         const listItem = document.createElement('li');
         listItem.textContent = `ID: ${data.id}, Data: ${data.date}, Nome: ${data.name}, Email: ${data.email}`;
         adminListContainer.appendChild(listItem);
     });
+}
+
+function clearFields() {
+    document.getElementById('username').value = '';
+    document.getElementById('usermail').value = '';
 }
