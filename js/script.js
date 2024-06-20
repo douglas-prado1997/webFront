@@ -49,3 +49,29 @@ function clearFields() {
     document.getElementById('username').value = '';
     document.getElementById('usermail').value = '';
 }
+
+function searchEntries() {
+    const username = document.getElementById('username').value.toLowerCase().trim();
+    const usermail = document.getElementById('usermail').value.toLowerCase().trim();
+    const dataList = JSON.parse(localStorage.getItem(storageKey)) || [];
+
+    if (!username && !usermail) {
+        alert('Adicione um Nome ou Email');
+        return;
+    }
+    debugger
+
+    const results = dataList.filter(entry => 
+        (username && entry.name.toLowerCase().includes(username)) || 
+        (usermail && entry.email.toLowerCase().includes(usermail))
+    );
+
+    if (results.length > 0) {
+        results.forEach(r => {
+            alert("Nome: " + r.name + "\nEmail: " + r.email);
+        });
+    } else {
+        alert('Não foi encontrado registro');
+    }
+}
+
