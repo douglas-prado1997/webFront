@@ -75,3 +75,10 @@ function searchEntries() {
     }
 }
 
+
+
+function clearList() {
+    localStorage.removeItem(storageKey);
+    alert('Lista Apagada');
+    displayAdminList();
+}
