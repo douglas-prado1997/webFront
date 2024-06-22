@@ -75,8 +75,8 @@ function searchEntries() {
     }
     debugger
 
-    const results = dataList.filter(entry => 
-        (username && entry.name.toLowerCase().includes(username)) || 
+    const results = dataList.filter(entry =>
+        (username && entry.name.toLowerCase().includes(username)) ||
         (usermail && entry.email.toLowerCase().includes(usermail))
     );
 
@@ -88,8 +88,6 @@ function searchEntries() {
         alert('Não foi encontrado registro');
     }
 }
-
-
 
 function clearList() {
     localStorage.removeItem(storageKey);

@@ -26,11 +26,11 @@ body {
 }
 
 .main {
-    height: 75%;
-    text-align: left;
-    color: #363636;
+    flex: 1;
+    padding-bottom: 60px;
     margin-left: 10px;
 }
+
 
 .exercise-section {
     flex: 1 1 45%;
@@ -188,7 +188,7 @@ button {
 li {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .btn-remove {
@@ -201,8 +201,51 @@ li {
     background: #660303;
     width: auto;
     max-width: 20px;
-    margin-left: 10px; 
+    margin-left: 10px;
     border-radius: 8px;
-    color: #fff; 
+    color: #fff;
     cursor: pointer;
+}
+
+#adminList {
+    margin-left: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+#adminListContainer {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#adminListContainer li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#adminList button {
+    background-color: #673a76;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+#adminList button:hover {
+    background-color: #83529E;
+}
+
+.admin-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
