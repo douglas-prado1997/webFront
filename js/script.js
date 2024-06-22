@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
     displayAdminList();
 });
 
+/* Função adequada para incluir dados do formulário (ID, data, nome e e-mail) em
+uma lista e no local storage. Os dados deverão ser armazenados em uma única
+chave, com valores em um objeto JSON. */
 function register() {
     const username = document.getElementById('username').value;
     const usermail = document.getElementById('usermail').value;
@@ -52,6 +55,7 @@ function displayAdminList() {
     });
 }
 
+// Função adequada para excluir um item da lista e do local storage.
 function removeItem(index) {
     const dataList = JSON.parse(localStorage.getItem(storageKey)) || [];
     dataList.splice(index, 1);
@@ -59,11 +63,13 @@ function removeItem(index) {
     displayAdminList();
 }
 
+//Função adequada para limpar os campos do formulário.
 function clearFields() {
     document.getElementById('username').value = '';
     document.getElementById('usermail').value = '';
 }
 
+// Função adequada para pesquisar um campo do formulário.
 function searchEntries() {
     const username = document.getElementById('username').value.toLowerCase().trim();
     const usermail = document.getElementById('usermail').value.toLowerCase().trim();
@@ -89,6 +95,7 @@ function searchEntries() {
     }
 }
 
+// Função adequada para excluir todos os itens da lista e do local storage.
 function clearList() {
     localStorage.removeItem(storageKey);
     alert('Lista Apagada');
