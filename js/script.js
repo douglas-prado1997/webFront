@@ -44,9 +44,7 @@ function displayAdminList() {
 
         const removeButton = document.createElement('button');
         removeButton.textContent = 'X';
-        removeButton.style.marginLeft = '10px';
-        removeButton.style.fontSize = 'small';
-        removeButton.style.padding = '2px 5px';
+        removeButton.classList.add('btn-remove');
         removeButton.onclick = () => removeItem(index);
 
         listItem.appendChild(removeButton);
