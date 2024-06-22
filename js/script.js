@@ -38,11 +38,27 @@ function displayAdminList() {
     const adminListContainer = document.getElementById('adminListContainer');
     adminListContainer.innerHTML = '';
 
-    dataList.forEach(data => {
+    dataList.forEach((data, index) => {
         const listItem = document.createElement('li');
-        listItem.textContent = `ID: ${data.id}, Data: ${data.date}, Nome: ${data.name}, Email: ${data.email}`;
+        listItem.textContent = `ID: ${data.id}, Data: ${data.date}, Nome: ${data.name}, Email: ${data.email} `;
+
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'X';
+        removeButton.style.marginLeft = '10px';
+        removeButton.style.fontSize = 'small';
+        removeButton.style.padding = '2px 5px';
+        removeButton.onclick = () => removeItem(index);
+
+        listItem.appendChild(removeButton);
         adminListContainer.appendChild(listItem);
     });
+}
+
+function removeItem(index) {
+    const dataList = JSON.parse(localStorage.getItem(storageKey)) || [];
+    dataList.splice(index, 1);
+    localStorage.setItem(storageKey, JSON.stringify(dataList));
+    displayAdminList();
 }
 
 function clearFields() {
